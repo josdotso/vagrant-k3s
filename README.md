@@ -11,6 +11,10 @@ git clone https://github.com/josdotso/vagrant-k3s.git
 cd vagrant-k3s
 
 vagrant up
+
+export KUBECONFIG="$(pwd)/kubeconfig"
+
+kubectl get pods --all-namespaces
 ```
 
 ## Prerequisites

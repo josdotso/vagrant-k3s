@@ -34,12 +34,10 @@ chmod 0755 install-k3s.sh
 ## This allows users to use k3s from outside this VM.
 cp /etc/rancher/k3s/k3s.yaml /vagrant/kubeconfig
 
-## Give feedback that this
-## script ran without error.
 echo OK
 echo
-echo Start using k3s by running the following commands.
-echo '(kubectl is required on the host machine for this to work)'
+echo Project Home: https://github.com/josdotso/vagrant-k3s
 echo
-echo '    export KUBECONFIG="$(pwd)/kubeconfig"'
-echo '    kubectl get pods --all-namespaces'
+echo Start using k3s by running the following commands.
+echo
+echo '$ export KUBECONFIG="$(pwd)/kubeconfig" && kubectl get pods --all-namespaces'
